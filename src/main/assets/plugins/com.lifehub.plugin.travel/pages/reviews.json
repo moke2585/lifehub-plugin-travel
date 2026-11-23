@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "pageId": "reviews",
+  "title": "我的评论",
+  "nodes": [
+    {
+      "type": "text",
+      "text": "按时间倒序收纳所有地区的评论；地区评分独立显示在地图、地区详情和每条评论下方。"
+    },
+    {
+      "type": "recordList",
+      "sourceId": "travel_reviews",
+      "emptyTitle": "还没有旅行评论",
+      "emptyMessage": "打开地图，点亮去过的省市与区县，写下第一条评论。",
+      "emptyActionLabel": "打开地图",
+      "emptyAction": {
+        "type": "navigate",
+        "pageId": "map"
+      }
+    }
+  ]
+}

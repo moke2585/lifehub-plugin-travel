@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "pageId": "province",
+  "title": "省份足迹",
+  "topBarActions": [
+    {
+      "icon": "search",
+      "contentDescription": "搜索地区",
+      "action": {
+        "type": "navigate",
+        "pageId": "region_search"
+      }
+    },
+    {
+      "icon": "chart",
+      "contentDescription": "评分榜",
+      "action": {
+        "type": "navigate",
+        "pageId": "ranking"
+      }
+    },
+    {
+      "icon": "notes",
+      "contentDescription": "我的评论",
+      "action": {
+        "type": "navigate",
+        "pageId": "reviews"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "type": "geoMap",
+      "sourceId": "travel_province_map",
+      "height": 520,
+      "zoomable": true,
+      "action": {
+        "type": "navigate",
+        "pageId": "city"
+      }
+    },
+    {
+      "type": "text",
+      "text": "每个市的名称旁会显示已点亮区县的平均评分；点击城市继续查看区县。"
+    }
+  ]
+}

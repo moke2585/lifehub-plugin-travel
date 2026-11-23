@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pageId": "map",
+  "title": "旅行足迹",
+  "topBarActions": [
+    {
+      "icon": "search",
+      "contentDescription": "搜索地区",
+      "action": {
+        "type": "navigate",
+        "pageId": "region_search"
+      }
+    },
+    {
+      "icon": "chart",
+      "contentDescription": "评分榜",
+      "action": {
+        "type": "navigate",
+        "pageId": "ranking"
+      }
+    },
+    {
+      "icon": "notes",
+      "contentDescription": "我的评论",
+      "action": {
+        "type": "navigate",
+        "pageId": "reviews"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "type": "metrics",
+      "sourceId": "travel_summary"
+    },
+    {
+      "type": "geoMap",
+      "sourceId": "travel_china_map",
+      "height": 560,
+      "zoomable": true,
+      "action": {
+        "type": "navigate",
+        "pageId": "province"
+      }
+    },
+    {
+      "type": "button",
+      "label": "导出高清地图",
+      "emphasis": "secondary",
+      "action": {
+        "type": "host",
+        "actionId": "com.lifehub.plugin.travel.export_map"
+      }
+    },
+    {
+      "type": "text",
+      "text": "点击省份进入省地图；拖动下方滑块可以缩放地图。右上角可以搜索地区、查看评分榜与所有评论。地图边界来自 DataV 与 OpenStreetMap。"
+    }
+  ]
+}

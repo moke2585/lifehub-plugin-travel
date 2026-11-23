@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "pageId": "ranking",
+  "title": "评分榜",
+  "topBarActions": [
+    {
+      "icon": "notes",
+      "contentDescription": "我的评论",
+      "action": {
+        "type": "navigate",
+        "pageId": "reviews"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "type": "metrics",
+      "sourceId": "travel_rank_overview"
+    },
+    {
+      "type": "text",
+      "text": "榜单只收录已评分的地区，按平均评分从高到低排列，每个榜单最多显示 20 条。"
+    },
+    {
+      "type": "section",
+      "title": "省榜",
+      "children": [
+        {
+          "type": "recordList",
+          "sourceId": "travel_rank_provinces",
+          "emptyTitle": "还没有评分的省份",
+          "emptyMessage": "先给已点亮的城市评分，省份评分会自动生成。"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "市榜",
+      "children": [
+        {
+          "type": "recordList",
+          "sourceId": "travel_rank_cities",
+          "emptyTitle": "还没有评分的城市",
+          "emptyMessage": "进入城市，给已点亮的区县评分后，城市会进入榜单。"
+        }
+      ]
+    },
+    {
+      "type": "section",
+      "title": "县区榜",
+      "children": [
+        {
+          "type": "recordList",
+          "sourceId": "travel_rank_counties",
+          "emptyTitle": "还没有评分的区县",
+          "emptyMessage": "点亮区县并提交星级评分后，会出现在这里。"
+        }
+      ]
+    }
+  ]
+}

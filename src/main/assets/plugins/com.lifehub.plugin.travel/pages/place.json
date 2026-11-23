@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "pageId": "place",
+  "title": "地区详情",
+  "topBarActions": [
+    {
+      "icon": "search",
+      "contentDescription": "搜索地区",
+      "action": {
+        "type": "navigate",
+        "pageId": "region_search"
+      }
+    },
+    {
+      "icon": "notes",
+      "contentDescription": "我的评论",
+      "action": {
+        "type": "navigate",
+        "pageId": "reviews"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "type": "metrics",
+      "sourceId": "travel_place_header"
+    },
+    {
+      "type": "text",
+      "text": "点亮、评分、评论是三个独立操作；评分针对整个地区，只会保留一个，可以随时修改。"
+    },
+    {
+      "type": "button",
+      "label": "点亮这里",
+      "action": {
+        "type": "host",
+        "actionId": "com.lifehub.plugin.travel.light"
+      }
+    },
+    {
+      "type": "button",
+      "label": "取消点亮",
+      "emphasis": "secondary",
+      "action": {
+        "type": "host",
+        "actionId": "com.lifehub.plugin.travel.unlight"
+      }
+    },
+    {
+      "type": "rating",
+      "id": "rating",
+      "label": "地区评分",
+      "max": 5,
+      "defaultValue": "0"
+    },
+    {
+      "type": "button",
+      "label": "提交评分",
+      "action": {
+        "type": "host",
+        "actionId": "com.lifehub.plugin.travel.set_rating"
+      }
+    },
+    {
+      "type": "input",
+      "id": "comment",
+      "label": "评论",
+      "placeholder": "说说你在这里的经历、印象或推荐…",
+      "multiline": true
+    },
+    {
+      "type": "button",
+      "label": "发布评论",
+      "action": {
+        "type": "host",
+        "actionId": "com.lifehub.plugin.travel.add_comment"
+      }
+    },
+    {
+      "type": "recordList",
+      "sourceId": "travel_place_reviews",
+      "emptyTitle": "还没有评论",
+      "emptyMessage": "写点什么，记录你在这里的经历与感受。"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "pluginId": "com.lifehub.plugin.travel",
+  "name": "旅迹",
+  "version": "3.0.0",
+  "description": "逐级点亮中国省市与区县，给整个地区打五星评分并写下多条旅行评论。",
+  "publisher": "LifeHub",
+  "icon": "travel",
+  "minHostVersion": 1,
+  "pluginSdkVersion": 1,
+  "capabilities": [
+    {
+      "id": "ui.action",
+      "reason": "逐级打开省份、城市与地区地图，点亮地区、评分并发布评论"
+    },
+    {
+      "id": "storage.private",
+      "reason": "保存点亮的地区、地区评分和多次旅行评论"
+    }
+  ],
+  "entryPage": "map",
+  "pages": [
+    {
+      "id": "map",
+      "title": "旅行足迹",
+      "file": "pages/map.json"
+    },
+    {
+      "id": "province",
+      "title": "省份足迹",
+      "file": "pages/province.json"
+    },
+    {
+      "id": "city",
+      "title": "城市足迹",
+      "file": "pages/city.json"
+    },
+    {
+      "id": "place",
+      "title": "地区详情",
+      "file": "pages/place.json"
+    },
+    {
+      "id": "reviews",
+      "title": "我的评论",
+      "file": "pages/reviews.json"
+    },
+    {
+      "id": "ranking",
+      "title": "评分榜",
+      "file": "pages/ranking.json"
+    },
+    {
+      "id": "region_search",
+      "title": "搜索地区",
+      "file": "pages/region_search.json"
+    }
+  ],
+  "dataSchemaVersion": 3,
+  "homeWidgets": [
+    {
+      "id": "traveled_places",
+      "type": "summary",
+      "title": "旅行足迹",
+      "size": "small",
+      "priority": 60,
+      "sourceId": "travel_summary",
+      "action": {
+        "type": "navigate",
+        "pageId": "map"
+      }
+    }
+  ],
+  "search": {
+    "sourceId": "travel_search"
+  }
+}

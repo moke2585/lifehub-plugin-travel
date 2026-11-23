@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "pageId": "city",
+  "title": "城市足迹",
+  "topBarActions": [
+    {
+      "icon": "search",
+      "contentDescription": "搜索地区",
+      "action": {
+        "type": "navigate",
+        "pageId": "region_search"
+      }
+    },
+    {
+      "icon": "chart",
+      "contentDescription": "评分榜",
+      "action": {
+        "type": "navigate",
+        "pageId": "ranking"
+      }
+    },
+    {
+      "icon": "notes",
+      "contentDescription": "我的评论",
+      "action": {
+        "type": "navigate",
+        "pageId": "reviews"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "type": "geoMap",
+      "sourceId": "travel_city_map",
+      "height": 520,
+      "zoomable": true,
+      "action": {
+        "type": "navigate",
+        "pageId": "place"
+      }
+    },
+    {
+      "type": "text",
+      "text": "点击地图上的地区进入详情；点亮、评分、评论互不影响，可以分别操作。"
+    }
+  ]
+}

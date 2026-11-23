@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "pageId": "region_search",
+  "title": "搜索地区",
+  "nodes": [
+    {
+      "type": "input",
+      "id": "query",
+      "label": "搜索地区",
+      "placeholder": "省、市、区县、镇街名称，例如 杭州、会昌县",
+      "action": {
+        "type": "host",
+        "actionId": "com.lifehub.plugin.travel.search_regions"
+      }
+    },
+    {
+      "type": "button",
+      "label": "搜索",
+      "action": {
+        "type": "host",
+        "actionId": "com.lifehub.plugin.travel.search_regions"
+      }
+    },
+    {
+      "type": "text",
+      "text": "搜索结果里可以直接点亮地区，或进入地区详情评分、写评论。"
+    },
+    {
+      "type": "recordList",
+      "sourceId": "travel_region_search",
+      "emptyTitle": "输入地名开始搜索",
+      "emptyMessage": "支持省、市、区县与镇街名称，例如 杭州、会昌县、虎门镇。"
+    }
+  ]
+}
